@@ -8,10 +8,10 @@
 **Task:** Initial Project Setup & MVP Scaffold
 
 ## Subtasks for MVP Implementation
-- [ ] **Subtask 1: Project Initialization**
+- [x] **Subtask 1: Project Initialization**
   - Scaffold Next.js 14 App Router project with React, TypeScript, and Tailwind CSS.
   - Initialize shadcn/ui.
-- [ ] **Subtask 2: Database & Auth Setup (Backend)**
+- [/] **Subtask 2: Database & Auth Setup (Backend)**
   - Connect to Servbay PostgreSQL.
   - Scaffold database schema for Hairstyles, Bookings, Customers, and Admins.
   - Setup Custom Authentication (Auth.js) with Admin support.
