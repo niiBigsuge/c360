@@ -1,0 +1,541 @@
+Hair Salon Booking & Home Service Platform — Project Description
+1. Project Overview
+
+The Hair Salon Booking & Home Service Platform is a modern, responsive web application designed to allow customers to conveniently browse available hairstyles, select their preferred hairstyle, choose where they want the service performed, and book an appointment online.
+
+Customers can choose between:
+
+In-Salon Service — The customer visits the salon.
+Home Service — A professional stylist travels to the customer's location.
+
+The platform is designed around a simple principle:
+
+Choose your style. Choose your location. Choose your time. We take care of the rest.
+
+Customers do not pay when making the booking. Payment is made after the hairstyle/service has been completed, with transportation included in the service arrangement.
+
+The initial product should focus on a high-end landing page and booking experience, rather than a complex customer dashboard.
+
+2. Main Goal
+
+The primary goal of the website is to convert visitors into confirmed salon appointments.
+
+The landing page should immediately communicate:
+
+What the salon offers
+Available hairstyles
+Home and in-salon services
+Simple online booking
+No upfront payment
+Professional stylists
+Convenient home service
+Transparent service pricing
+
+The main CTA should be something like:
+
+"Book an Appointment"
+
+with secondary actions such as:
+
+"Explore Hairstyles"
+"Book Home Service"
+
+3. Landing Page Structure
+A. Navigation Bar
+
+The header should contain:
+
+Logo / Salon Name
+
+Navigation:
+
+Home
+Hairstyles
+Services
+How It Works
+About Us
+Contact
+
+Primary button:
+
+Book Appointment
+
+The navigation should remain clean and minimal.
+
+4. Hero Section
+
+The hero section should be the most visually impressive section of the website.
+
+Suggested headline:
+
+"Your Perfect Hair, Wherever You Want It."
+
+Supporting text:
+
+Book your favorite hairstyle online and choose whether to visit our salon or have a professional stylist come directly to you.
+
+CTA buttons:
+
+Book an Appointment
+
+Explore Hairstyles
+
+The hero should feature a high-quality image of a professionally styled woman, preferably showing the hairstyle clearly.
+
+5. Quick Booking Section
+
+Immediately below the hero, provide a simple booking widget.
+
+"Book Your Appointment"
+
+The customer selects:
+
+1. Choose Hairstyle
+
+Examples:
+
+Knotless Braids
+Box Braids
+Cornrows
+Ghana Braids
+Wig Installation
+Natural Hair Styling
+Locs
+Twists
+Bridal Hairstyles
+Kids Hairstyles
+
+2. Choose Service Location
+
+In-Salon
+At Home
+
+3. Choose Date & Time
+
+Calendar and available appointment slots.
+
+4. Enter Customer Details
+
+Full Name
+Phone Number
+Email
+Location — required for home service
+Additional Notes
+
+5. Confirm Booking
+
+The customer receives a booking confirmation.
+
+6. Hairstyle Showcase
+
+A visually attractive section displaying popular hairstyles.
+
+Section title:
+
+"Find Your Next Look"
+
+Each hairstyle card can contain:
+Hairstyle image
+Hairstyle name
+Starting price
+Estimated duration
+Short description
+Book This Style button
+
+Example:
+
+Knotless Braids
+
+From GHS XXX
+Duration: 3–5 hours
+
+Book This Style
+
+This is important because the customer should be able to start the booking process directly from a hairstyle card.
+
+7. Services Section
+
+Create three or four major service categories.
+
+In-Salon Styling
+
+Visit our salon and enjoy a professional styling experience in a comfortable environment.
+
+Home Hair Service
+
+Can't make it to the salon? A stylist comes to your preferred location.
+
+Bridal & Events
+
+Professional styling for weddings, parties, photoshoots and special occasions.
+
+Kids Hair
+
+Gentle and professional hairstyles designed specifically for children.
+
+8. Home Service Highlight
+
+Because home service is one of the platform's major selling points, give it its own prominent section.
+
+Headline:
+
+"We Bring the Salon to You."
+
+Explain:
+
+Enjoy professional hairstyling from the comfort of your home. Select Home Service during booking, provide your location, choose your preferred appointment time, and we'll arrange the stylist and transportation.
+
+9. "How It Works" Section
+
+Keep this extremely simple.
+
+01 — Choose Your Style
+
+Browse hairstyles and select the look you want.
+
+02 — Choose Where
+
+Select In-Salon or At Home.
+
+03 — Pick a Time
+
+Select an available date and appointment time.
+
+04 — Confirm
+
+Enter your details and confirm your appointment.
+
+05 — Get Styled
+
+Visit the salon or have the stylist come to you.
+
+06 — Pay After Service
+
+Payment is made after your hairstyle has been completed.
+
+10. Payment Section
+
+This should be prominently communicated because paying after service is a major selling point.
+
+Suggested message:
+
+"No Upfront Payment."
+
+Book your appointment with confidence. You don't need to make a payment during booking. Simply receive your service and pay upon completion.
+
+For home service, the transportation cost can be incorporated into the displayed service price or clearly shown as a transportation component during booking.
+
+11. Featured / Popular Hairstyles
+
+A section such as:
+
+"Trending Looks"
+
+Display 6–8 popular styles.
+
+Each card:
+
+Image
+Hairstyle Name
+Price
+Duration
+Location availability
+
+Book Now
+
+This gives the landing page a strong visual shopping/browsing experience.
+
+12. Why Choose Us
+
+Use concise selling points:
+
+Professional Stylists
+
+Experienced professionals who care about the quality of your hairstyle.
+
+Easy Online Booking
+
+Book your appointment from your phone or computer.
+
+Home Service
+
+Get professionally styled without leaving home.
+
+Flexible Locations
+
+Choose between visiting the salon or receiving your service at home.
+
+Pay After Service
+
+No upfront payment required.
+
+Reliable Appointments
+
+Your selected date and time are recorded and managed through the booking system.
+
+13. Customer Reviews
+
+Include testimonials to build trust.
+
+Example:
+
+"I booked my knotless braids online and had the stylist come to my house. The entire process was incredibly easy."
+
+Display:
+
+Customer name
+Profile image
+Rating
+Review
+Hairstyle booked
+
+14. Gallery
+A visual gallery showing completed hairstyles.
+
+Possible categories:
+Braids
+Natural Hair
+Wig Installation
+Cornrows
+Bridal
+Kids
+Locs
+
+The gallery should be image-heavy because hair is a highly visual service.
+
+15. Booking CTA
+
+Near the bottom of the landing page:
+
+"Ready for Your New Look?"
+
+Choose your hairstyle and book your appointment in just a few minutes.
+
+Book Your Appointment
+
+16. Footer
+The footer should contain:
+Salon
+About Us
+Our Stylists
+Services
+Hairstyles
+Booking
+Book Appointment
+Home Service
+In-Salon Service
+Booking Policy
+Contact
+Phone
+WhatsApp
+Email
+Location
+Social media
+Legal
+Privacy Policy
+Terms & Conditions
+Cancellation Policy
+
+17. Booking Flow
+The core booking process should work like this:
+
+Landing Page
+     |
+     v
+Browse Hairstyles
+     |
+     v
+Select Hairstyle
+     |
+     v
+Choose Service
+ ┌───────────────┐
+ |               |
+ v               v
+In-Salon       Home Service
+ |               |
+ |               v
+ |          Enter Location
+ |               |
+ └───────┬───────┘
+         v
+   Select Date & Time
+         |
+         v
+    Customer Details
+         |
+         v
+   Review Appointment
+         |
+         v
+   Confirm Booking
+         |
+         v
+ Booking Confirmation
+         |
+         v
+ Service Completed
+         |
+         v
+      Payment
+18. Important Booking Rules
+
+The system should enforce several rules.
+
+Appointment availability
+
+A customer should only be able to select available appointment slots.
+
+Stylist availability
+
+If specific stylists are assigned to particular hairstyles, the system should check their availability.
+
+Home service
+
+Home bookings must collect the customer's service location.
+
+Transportation
+
+Transportation should automatically be included in the booking calculation according to the salon's pricing rules.
+
+For example:
+
+Hairstyle                 GHS 250
+Home Service Transport    GHS 30
+--------------------------------
+Total                     GHS 280
+
+Payment Due: After Service
+
+Or, if transportation is included in the hairstyle price:
+
+Hairstyle                 GHS 280
+Transportation            Included
+--------------------------------
+Payment Due: After Service
+
+19. Admin Side — Future Backend
+
+Although the first version is a landing page, the architecture should be designed so that an admin system can later be added.
+
+The admin dashboard could eventually manage:
+
+Hairstyles
+Add hairstyle
+Edit hairstyle
+Delete hairstyle
+Price
+Duration
+Images
+Description
+Availability
+Appointments
+Pending
+Confirmed
+In Progress
+Completed
+Cancelled
+No-show
+Customers
+Customer information
+Booking history
+Preferred hairstyles
+Specialties
+Working hours
+Assigned appointments
+Availability
+Home Services
+Customer location
+Transportation fee
+Service status
+Payments
+Amount due
+Amount paid
+Payment status
+Payment method
+Payment date
+
+20. Recommended Landing Page Design
+
+For the visual direction, I would recommend a premium beauty/fashion aesthetic rather than a generic business website.
+
+Design characteristics
+Large professional hairstyle photography
+Elegant typography
+Lots of whitespace
+Rounded cards
+Subtle animations
+Clean navigation
+Large booking CTA
+Mobile-first design
+Premium-looking buttons
+Smooth scrolling
+Before/after or hairstyle gallery sections
+
+21. Recommended Technology
+
+Frontend:
+Next.js
+React
+TypeScript
+Tailwind CSS
+
+Backend:
+Next.js API routes/server actions, or
+Node.js/NestJS backend
+
+Database:
+PostgreSQL
+
+Authentication:
+Customer accounts,
+Admin accounts,
+Notifications.
+
+Eventually:
+
+Email confirmation,
+WhatsApp notification.
+
+22. MVP Scope
+
+For the first version, I would keep it focused.
+
+Landing Page
+Hero
+Hairstyles
+Services
+Home service
+How it works
+Why choose us
+Reviews
+Gallery
+Contact
+Booking CTA
+Booking
+Select hairstyle
+Select home/in-salon
+Select date
+Select time
+Enter customer information
+Enter home location when applicable
+Review booking
+Confirm booking
+Booking confirmation
+Payment
+
+No online payment initially.
+
+Payment status:
+
+Payment: Due After Service
+
+This keeps the first release significantly simpler while matching your business model.
+
+Overall Product Concept
+
+The website should ultimately feel like a combination of a premium salon website + online appointment marketplace + mobile/home hairstyling service.
+
+The key customer journey should be:
+
+See a hairstyle → Want it → Book it → Choose home or salon → Pick a time → Get styled → Pay after completion.
