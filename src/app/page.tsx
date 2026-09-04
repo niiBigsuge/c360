@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -12,9 +13,9 @@ export default function Home() {
             <a href="#services" className="text-foreground hover:text-primary underline-offset-4 hover:underline">Services</a>
             <a href="#how-it-works" className="text-foreground hover:text-primary underline-offset-4 hover:underline">How It Works</a>
           </nav>
-          <Button variant="default" className="shadow-[rgba(255,255,255,0.2)_0px_0.5px_0px_0px_inset,rgba(0,0,0,0.2)_0px_0px_0px_0.5px_inset,rgba(0,0,0,0.05)_0px_1px_2px_0px]">
+          <Link href="/book" className="inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none hover:bg-primary/80 bg-primary text-primary-foreground shadow-[rgba(255,255,255,0.2)_0px_0.5px_0px_0px_inset,rgba(0,0,0,0.2)_0px_0px_0px_0.5px_inset,rgba(0,0,0,0.05)_0px_1px_2px_0px] h-8 gap-1.5 px-2.5">
             Book Appointment
-          </Button>
+          </Link>
         </div>
       </header>
 
@@ -27,12 +28,12 @@ export default function Home() {
           Book your favorite hairstyle online and choose whether to visit our salon or have a professional stylist come directly to you.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="shadow-[rgba(255,255,255,0.2)_0px_0.5px_0px_0px_inset,rgba(0,0,0,0.2)_0px_0px_0px_0.5px_inset,rgba(0,0,0,0.05)_0px_1px_2px_0px] text-base px-8 py-6 h-auto">
+          <Link href="/book" className="inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none hover:bg-primary/80 bg-primary text-primary-foreground shadow-[rgba(255,255,255,0.2)_0px_0.5px_0px_0px_inset,rgba(0,0,0,0.2)_0px_0px_0px_0.5px_inset,rgba(0,0,0,0.05)_0px_1px_2px_0px] text-base px-8 py-6 h-auto">
             Book an Appointment
-          </Button>
-          <Button size="lg" variant="outline" className="text-base px-8 py-6 h-auto border-black/40 hover:bg-black/5">
+          </Link>
+          <Link href="/#hairstyles" className="inline-flex shrink-0 items-center justify-center rounded-lg border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none bg-background hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground text-base px-8 py-6 h-auto border-black/40 hover:bg-black/5">
             Explore Hairstyles
-          </Button>
+          </Link>
         </div>
       </section>
 

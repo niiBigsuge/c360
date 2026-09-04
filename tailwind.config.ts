@@ -43,6 +43,13 @@ const config: Config = {
           foreground: "var(--card-foreground)",
         },
       },
+      data: {
+        checked: 'checked',
+        open: 'open',
+        closed: 'closed',
+        disabled: 'disabled',
+        placeholder: 'placeholder',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

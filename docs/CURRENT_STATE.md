@@ -15,11 +15,12 @@
   - Connect to Servbay PostgreSQL.
   - Scaffold database schema for Hairstyles, Bookings, Customers, and Admins.
   - Setup Custom Authentication (Auth.js) with Admin support.
-- [/] **Subtask 3: Landing Page & UI Framework**
+- [x] **Subtask 3: Landing Page & UI Framework**
   - Build Hero section, Services, and Trending Looks.
   - Implement UI components adhering strictly to `design.md`.
-- [ ] **Subtask 4: Booking Engine**
-  - Build booking flow (Select Style -> In-Salon/Home -> Location & 15% Transport Fee logic -> Date/Time -> Customer Details -> Confirm).
+- [/] **Subtask 4: Booking Engine**
+  - Build multi-step booking form.
+  - Implement 15% transportation fee logic for "At Home" services.
   - Enforce PostgreSQL RLS for public insertions.
   - Setup email confirmations (Resend).
 
