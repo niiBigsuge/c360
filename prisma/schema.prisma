@@ -40,12 +40,14 @@ model User {
   name          String?
   email         String?   @unique
   emailVerified DateTime?
+  password      String?
   image         String?
   role          Role      @default(CUSTOMER)
   
   accounts      Account[]
   sessions      Session[]
-  bookings      Booking[]
+  bookings      Booking[] @relation("CustomerBookings")
+  assignments   Booking[] @relation("StylistBookings")
 }
 
 model VerificationToken {
@@ -94,7 +96,10 @@ model Hairstyle {
 model Booking {
   id              String          @id @default(cuid())
   userId          String
-  user            User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user            User            @relation("CustomerBookings", fields: [userId], references: [id], onDelete: Cascade)
+  
+  stylistId       String?
+  stylist         User?           @relation("StylistBookings", fields: [stylistId], references: [id], onDelete: SetNull)
   
   hairstyleId     String
   hairstyle       Hairstyle       @relation(fields: [hairstyleId], references: [id])

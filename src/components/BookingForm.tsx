@@ -8,30 +8,34 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 import { submitBooking } from "@/app/actions/book"
+import { toast } from "sonner"
 
-const mockHairstyles = [
-  { id: "h1", name: "Knotless Braids", price: 150 },
-  { id: "h2", name: "Silk Press", price: 90 },
-  { id: "h3", name: "Faux Locs", price: 200 }
-]
+type Hairstyle = {
+  id: string
+  name: string
+  price: number
+  description: string | null
+  durationMin: number
+  imageUrl?: string | null
+}
 
-export function BookingForm() {
+export function BookingForm({ hairstyles, user }: { hairstyles: Hairstyle[], user?: { name?: string | null, email?: string | null } | null }) {
   const [step, setStep] = useState(1)
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   
   const [formData, setFormData] = useState({
-    hairstyleId: mockHairstyles[0].id,
+    hairstyleId: hairstyles.length > 0 ? hairstyles[0].id : "",
     locationType: "IN_SALON",
     homeAddress: "",
     date: "",
     time: "",
-    name: "",
-    email: "",
+    name: user?.name || "",
+    email: user?.email || "",
     notes: ""
   })
 
-  const selectedHairstyle = mockHairstyles.find(h => h.id === formData.hairstyleId)
+  const selectedHairstyle = hairstyles.find(h => h.id === formData.hairstyleId)
   const transportFee = formData.locationType === "AT_HOME" ? (selectedHairstyle?.price || 0) * 0.15 : 0
   const totalAmount = (selectedHairstyle?.price || 0) + transportFee
 
@@ -45,8 +49,11 @@ export function BookingForm() {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
+  const [error, setError] = useState<string | null>(null)
+  
   const handleBooking = async () => {
     setLoading(true)
+    setError(null)
     const data = new FormData()
     Object.entries(formData).forEach(([key, value]) => data.append(key, value))
     
@@ -54,8 +61,9 @@ export function BookingForm() {
     setLoading(false)
     if (res.success) {
       setSuccess(true)
+      toast.success("Booking confirmed successfully!")
     } else {
-      alert(res.error)
+      setError(res.error || "An unknown error occurred.")
     }
   }
 
@@ -64,7 +72,7 @@ export function BookingForm() {
       <Card className="max-w-xl mx-auto p-6 text-center shadow-none border-border">
         <CardHeader>
           <CardTitle className="text-3xl text-primary">Booking Confirmed!</CardTitle>
-          <CardDescription className="text-lg">Thank you, {formData.name}. We've sent a confirmation email to {formData.email}.</CardDescription>
+          <CardDescription className="text-lg">Thank you, {formData.name}. We look forward to seeing you.</CardDescription>
         </CardHeader>
       </Card>
     )
@@ -85,13 +93,27 @@ export function BookingForm() {
               onValueChange={(val) => setFormData(prev => ({ ...prev, hairstyleId: val }))}
               className="grid gap-4"
             >
-              {mockHairstyles.map(h => (
-                <div key={h.id} className="flex items-center space-x-2 border border-border p-4 rounded-md bg-background">
-                  <RadioGroupItem value={h.id} id={h.id} />
-                  <Label htmlFor={h.id} className="flex-1 cursor-pointer font-medium">{h.name}</Label>
-                  <span className="font-semibold text-primary">${h.price}</span>
+              {hairstyles.length === 0 ? (
+                <div className="text-sm text-muted-foreground p-4 text-center border border-border rounded-md">
+                  No hairstyles available.
                 </div>
-              ))}
+              ) : (
+                hairstyles.map(h => (
+                  <div key={h.id} className="flex items-center space-x-4 border border-border p-4 rounded-md bg-background">
+                    <RadioGroupItem value={h.id} id={h.id} className="mt-1 self-start" />
+                    {h.imageUrl && (
+                      <div className="shrink-0 w-16 h-16 rounded overflow-hidden bg-black/5">
+                        <img src={h.imageUrl} alt={h.name} className="w-full h-full object-cover" />
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <Label htmlFor={h.id} className="cursor-pointer font-medium block text-base">{h.name}</Label>
+                      {h.description && <p className="text-sm text-muted-foreground mt-0.5 line-clamp-2">{h.description}</p>}
+                    </div>
+                    <span className="font-semibold text-primary whitespace-nowrap">${h.price.toFixed(2)}</span>
+                  </div>
+                ))
+              )}
             </RadioGroup>
           </div>
         )}
@@ -127,12 +149,19 @@ export function BookingForm() {
           <div className="space-y-4">
             <div className="grid gap-2">
               <Label htmlFor="date">Date</Label>
-              <Input type="date" id="date" name="date" value={formData.date} onChange={handleChange} />
+              <Input 
+                type="date" 
+                id="date" 
+                name="date" 
+                value={formData.date} 
+                onChange={handleChange} 
+                min={new Date().toISOString().split('T')[0]}
+              />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="time">Time</Label>
               <Input type="time" id="time" name="time" value={formData.time} onChange={handleChange} />
-              <p className="text-sm text-muted-foreground">We accept up to 3 bookings per timeslot.</p>
+              <p className="text-sm text-muted-foreground">We accept up to 3 bookings per timeslot. Operating hours: 9:00 AM - 5:00 PM.</p>
             </div>
           </div>
         )}
@@ -141,16 +170,22 @@ export function BookingForm() {
           <div className="space-y-4">
             <div className="grid gap-2">
               <Label htmlFor="name">Full Name</Label>
-              <Input id="name" name="name" value={formData.name} onChange={handleChange} />
+              <Input id="name" name="name" value={formData.name} onChange={handleChange} readOnly={!!user?.name} className={user?.name ? "bg-black/5" : ""} />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" name="email" value={formData.email} onChange={handleChange} />
+              <Input id="email" type="email" name="email" value={formData.email} onChange={handleChange} readOnly={!!user?.email} className={user?.email ? "bg-black/5" : ""} />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="notes">Notes (Optional)</Label>
               <Textarea id="notes" name="notes" placeholder="Any special requests?" value={formData.notes} onChange={handleChange} />
             </div>
+            
+            {error && (
+              <div className="p-3 bg-red-50 text-red-600 rounded-md text-sm mt-4">
+                {error}
+              </div>
+            )}
             
             <div className="mt-6 p-4 bg-muted rounded-lg">
               <h4 className="font-semibold mb-2">Order Summary</h4>

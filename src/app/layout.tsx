@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Book your favorite hairstyle online and choose whether to visit our salon or have a professional stylist come directly to you.",
 };
 
+import { Toaster } from 'sonner';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,6 +21,7 @@ export default function RootLayout({
     <html lang="en" className={cn("font-sans", inter.variable)}>
       <body className="antialiased bg-background text-foreground">
         {children}
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );

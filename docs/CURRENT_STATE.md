@@ -9,20 +9,42 @@
 
 ## Subtasks for MVP Implementation
 - [x] **Subtask 1: Project Initialization**
-  - Scaffold Next.js 14 App Router project with React, TypeScript, and Tailwind CSS.
-  - Initialize shadcn/ui.
 - [x] **Subtask 2: Database & Auth Setup (Backend)**
   - Connect to Servbay PostgreSQL.
-  - Scaffold database schema for Hairstyles, Bookings, Customers, and Admins.
-  - Setup Custom Authentication (Auth.js) with Admin support.
+  - Setup Custom Authentication (Auth.js) with bcryptjs and Credentials Provider.
+  - Add admin securely via `prisma/seed.ts`
 - [x] **Subtask 3: Landing Page & UI Framework**
-  - Build Hero section, Services, and Trending Looks.
-  - Implement UI components adhering strictly to `design.md`.
-- [/] **Subtask 4: Booking Engine**
-  - Build multi-step booking form.
-  - Implement 15% transportation fee logic for "At Home" services.
-  - Enforce PostgreSQL RLS for public insertions.
-  - Setup email confirmations (Resend).
+- [x] **Subtask 4: Booking Engine**
+  - Implement full booking multi-step form with guest and authenticated paths.
+- [x] **Subtask 5: Admin Dashboard & Dynamic Data**
+  - Admin UI for bookings and hairstyles.
+  - Image Uploads for Hairstyles saving to `public/uploads`.
+  - Admin login securely routes directly to Admin dashboard.
+
+- [x] **Subtask 6: Route Security & Customer Experience**
+  - Secured `/admin` routes using Auth.js layout-level checks.
+  - Built Customer Dashboard (`/profile`) for authenticated users to view booking history.
+  - Updated login/registration flows to route customers directly to their profile.
+
+- [x] **Subtask 7: Smart Scheduling Engine**
+  - Enforced 9 AM to 5 PM operating hours.
+  - Limited concurrent bookings to a maximum of 3 per timeslot.
+  - Added inline form validation.
+
+- [x] **Subtask 8: Customer Booking Cancellations**
+  - Allowed customers to cancel `PENDING` bookings within 15 minutes of creation via `/profile`.
+
+- [x] **Subtask 9: Stylist Assignments & Toast Notifications**
+  - Expanded Prisma schema to include `stylistId` relationships for the `STYLIST` role.
+  - Added Assignment UI to the Admin Dashboard.
+  - Replaced email logic with smooth in-app pop-up notifications (sonner) for bookings, cancellations, and assignments.
+  - Added active Logout/Sign Out navigation to the Customer Profile.
+
+- [x] **Subtask 10: Unified Login/Signup Modal UI**
+  - Consolidated authentication into a single drop-down popover modal.
+  - Form switches dynamically between Login and Registration states.
+  - Removed outdated `/register` standalone page and standalone header links.
+  - Suppressed unneeded Next.js `<img>` ESLint warnings.
 
 ## Memory & Blockers
-- Awaiting Researcher to confirm package versions and architectural patterns for Next.js 14 + Auth.js + Postgres.
+- **Pending:** Awaiting next feature request for the landing page (Our Team, About Us, or Contact).
